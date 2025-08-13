@@ -127,3 +127,7 @@ compiled/
 
 # Cython debug symbols
 cython_debug/
+
+
+#world backups
+*.zip
