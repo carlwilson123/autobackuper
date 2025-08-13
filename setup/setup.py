@@ -3,7 +3,7 @@ import urllib.request
 import os
 import psutil
 import time as t
-from typing import Generator
+
 
 # endregion
 
@@ -17,8 +17,8 @@ def is_program_running(program_name:str ) -> bool:
         bool: True if the program is running, False otherwise.
     """
 
-    for proc in psutil.process_iter(['name']) :
-        if proc.info['name'] == program_name:1
+    for proc in psutil.process_iter(['name']) : #type:ignore put here because mypy is not able to infer the type of proc.info since it is a "generator" not a Generator
+        if proc.info['name'] == program_name:
             return True
     return False
 #endregion
