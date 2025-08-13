@@ -1,0 +1,2 @@
+# .gitkeep
+This file is used to ensure that empty directories are tracked by git. You can safely ignore or remove this file if the directory contains other files.
