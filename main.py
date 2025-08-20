@@ -2,6 +2,7 @@ from zipper import zip_files #type: ignore
 from uploader import move_file #type: ignore
 import time as t
 import psutil
+import sys
 #this handles mainly launching the foundry exe and making sure that when it clothese 
 
 #region functions
@@ -30,8 +31,18 @@ while is_program_running("Foundry Virtual Tabletop.exe"):
     t.sleep(5)
 
 
-zip_paths = zip_files()
+args_in:list[str] = sys.argv[1:]
+
+if len(args_in) > 1:
+    zip_paths = zip_files()
+else:
+    args = args_in[0].split(",")
+    zip_paths = zip_files(world_sel=args)
+
+
 upload_path = r"G:\My Drive\backups"
+
+
 
 for zip in zip_paths:
     move_file(zip, upload_path)

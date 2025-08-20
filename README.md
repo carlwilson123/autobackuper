@@ -21,7 +21,7 @@ in powershell when in directory run
 MIT
 
 
-## explanations
+## code 
 
 ### Zipper.py
 

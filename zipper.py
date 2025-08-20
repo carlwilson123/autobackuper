@@ -9,7 +9,7 @@ an = "test"
 
 
 
-def zip_files(world_sel:list[str]|str = "all", user:str = os.getlogin(), rel_path:str = r"/AppData/Local/FoundryVTT/Data/worlds") -> list[str]:
+def zip_files(world_sel:list[str]|str = "all", rel_path:str = r"/AppData/Local/FoundryVTT/Data/worlds", user:str = os.getlogin()) -> list[str]:
     """
     Zips FoundryVTT world directories for backup.
     Args:
